@@ -10,16 +10,19 @@ struct IPv4 {
 };
 
 void update_val(struct IPv4 s) {
-    sprintf((char *)s.data, "update_val");
+    sprintf(s.data, "update_val");
 }
 
 void update_ptr(struct IPv4 *s) {
-    sprintf((char *)s->data, "update_ptr");
+    sprintf(s->data, "update_ptr");
 }
 
 int main() {
     struct IPv4 s1 = {0};
     struct IPv4 s2 = {0};
+
+    sprintf(s1.data, "original");
+    sprintf(s2.data, "original");
 
     update_val(s1);
     update_ptr(&s2);
