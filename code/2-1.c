@@ -11,7 +11,7 @@ int main() {
     u.f = 3.14;
 
     for (int i = 0; i < 4; i++) {
-        printf("0x%x\n", (unsigned)u.c[i]);
+        printf("%x\n", (unsigned)u.c[i]);
     }
 
     return 0;
